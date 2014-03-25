@@ -47,6 +47,112 @@ subsections, such as this one, will still be collapsed.  Hitting the
 TAB key again will expand all of the subsections.  Hitting the key
 ford a third time will collapse the section back down to a header.
 
+Go ahead and expand all of the subsections.  Then scroll down to the
+[[Quick Start][Quick Start]] subsection.  If you follow for four more paragraphs, you
+should be able to find this sentence again.  Congratulations!  You're
+now reading the guide in org-mode itself!  As you grow more
+comfortable with org-mode and emacs, you will probably find reading
+this documentation directly to be more helpful than just having a copy
+in the browser.  However, for right now, keep the browser open.  The
+reasoning for this is that Emacs uses a large number of keyboard
+commands and is VERY finicky about them.  If you start performing a
+hot key and need to scroll the page to find out more, Emacs will
+assume that the scrolling is part of the hot key and the command will
+fail.  
+
+*** Exporting Documentation
+
+Look toward the bottom of your Emacs window.  There should be a grey
+line that says "guide.org" on the left hand side.  Beneath that is a
+blank line.  That blank line is known as the Minibuffer.  Try hitting
+Ctrl+C.  This will cause the Minibuffer to read
+
+: C-c-
+
+This indicates that emacs has recognized that you've hit Ctrl+c.  The
+capital C stands for Control.  The reason that it says =C= and not
+=Ctrl= is imply because emacs is really, really old.  Now hit Ctrl+g.
+The Minibuffer should read
+
+: C-c C-g is undefined
+
+Ctrl+g is the cancel hotkey for Emacs.  Anytime something weird is
+happening and you're not sure what's going on, hit Ctrl-g to get Emacs
+to stop what it's doing.
+
+Now we're going to try our first real command.  Type Ctrl+c, followed
+by Ctrl+e.  The Emacs window will suddenly split in half and there
+will be a large frame describing the export options that you have
+available.  You should see one line which says 
+
+: [h] Export to HTML
+
+We want to reproduce the browser documentation, so hit the =h= key.
+The =h= in the "[h] Export to HTML" line should stop being
+highlighted.  The two lines below should still have highlighted
+letters.  Hit the =o= key to export this file to HTML and load it in
+the browser.  Your favorite web browser will open up and you'll see
+the guide.html file.  
+
+Congratulations!  You now know how to turn an org file into a web
+page.  The browser documentation that you started with was made by
+doing exactly what you just did.
+
+*** Exporting Code
+
+While it's great that you can now get to the documentation, it's not
+very useful without something to document.  We'll write a very simple
+program.
+
+#+begin_src python :exports code :tangle simple.py
+  print("This is a very simple program.")
+#+end_src
+
+If you look at the code within the org file, it'll read as
+
+
+: #+begin_src python :exports code :tangle simple.py
+:   print("This is a very simple program.")
+: #+end_src
+
+The =#+begin_src= and =#+end_src= tags mark that the text in the
+middle is part of a program.  The name of the language immediately
+follows the =#+begin_src= declaration.  In this case, the language was
+Python.  The src tags and the language names are the only parts
+required for a block of source code.  Optional information can be
+added with tags that begin with a colon.  For instance, the =:exports=
+tag tells org-mode how to behave when the documentation is being
+[[Exporting Documentation][exported]].  The picking =:exports code= tells org-mode to just put the
+code block in the documentation.  On the other hand, =:exports
+results= causes org-mode to *run* the code in the block and put the
+output of the program into the documentation instead.  If you want
+both the code and the documentation, then you'd choose =:exports
+both=, while =:exports none= would keep the whole thing out.
+
+The hot key =Ctrl+c Ctrl+v t= will tangle the file and help explain
+the =:tangle= option..  Tangling is process of extracting the source
+code out of a file.  Running the hot key should give you the message
+
+: Tangled NUMBER code blocks from guide.org
+
+The =:tangle= option tells org-mode where to put the source once its
+been extracted.  
+
+Go ahead and run the =Ctrl+c Ctrl+v t= hot key.  There should now be a
+file [[file:simple.py][simple.py]] which contains the program from the above block.
+Congratulations!  You can now get both the documentation and source
+out of the org file.  If you've decided that you hate emacs and
+org-mode, you can now head on your merry way, as you never NEED to use
+them again.  You can edit the source in whatever program you like and
+write your own documentation however you want.  On the other hand, if
+you'd like to learn more about what's available, continue on to the
+next chapter.
 
 #+TITLE: A Newbie's Guide to Org Mode in Emacs
 #+AUTHOR: Adam Washington
+
+#  LocalWords:  Minibuffer Ctrl
+
+
+
+  
