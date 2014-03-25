@@ -1,0 +1,6 @@
+#+TITLE: A Newbie's Guide to Org Mode in Emacs
+#+AUTHOR: Adam Washington
+
+* Introduction
+
+Greetings
