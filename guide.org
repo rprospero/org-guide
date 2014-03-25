@@ -1,6 +1,52 @@
-#+TITLE: A Newbie's Guide to Org Mode in Emacs
-#+AUTHOR: Adam Washington
-
 * Introduction
 
-Greetings
+So, you've inherited a =.org= file and have no idea what to do with
+it.  I'm going to try to help you with that.  After all, if you're
+reading this, then there's a good chance that I'm they guy that left
+you the =.org= file, so this is kind of my fault.  However, I promise
+you that I didn't do it just to be difficult.  Org mode is a very
+powerful way of organizing both code and data.  It gives you the power
+of Mathematica notebooks or IPython notebooks without being tied down
+to a single language.  It lets you document your software like a book,
+keep all of your data in one place, and make sure that your code and
+data are in sync.  It will also keep track of your progress on
+projects, write your daily agenda, and let you know when you're
+running behind.  It'll even balance your check book, if you get really
+excited.
+
+However, that's a ways away.  We'll start slowly here.
+
+** A Word On Style
+
+This guide is intended to get you started working with org files as
+quickly and proficiently as possible.  The catch is that org files are
+edited through Emacs, which is an ancient and byzantine program which
+has its own way of doing nearly everything.
+
+Through most of this guide, I will *not* focus on teaching the /Emacs
+Way/ of doing things, but stick with what will be simpler.  If you
+find yourself spending large amounts of time in Emacs, it might be
+better to learn the official ways, as some of what I will teach is
+considered blasphemous to use on a regular basis.
+
+** Quick Start
+
+If you're a true beginner, you're probably reading this right now in
+your web browser (e.g. Firefox, IE, Chrome).  That's a good place to
+start, but that's not the actual =.org=.  All of this documentation
+came from an =.org= file called guide.org.
+
+Start the program =Gnu Emacs=.  Go to the file menu and click =Open
+File...= Open the file =guide.org=.  You'll see a list of chapter
+headings, each followed by an ellipsis.  Click on the first line, which should read
+
+: * Introduction...
+
+Hit the TAB key.  The Introduction section will be expanded.  However,
+subsections, such as this one, will still be collapsed.  Hitting the
+TAB key again will expand all of the subsections.  Hitting the key
+ford a third time will collapse the section back down to a header.
+
+
+#+TITLE: A Newbie's Guide to Org Mode in Emacs
+#+AUTHOR: Adam Washington
