@@ -239,6 +239,24 @@ next chapter.
     You can hit the TAB key twice to get a list of all of the possible
     completions.
 
+*** Saving a file
+
+    Again, there are three methods to save a file.  Under the =File=
+    menu, the familiar =Save= and =Save as= options are available,
+    just as in other word processors.  Also, the save icon is
+    available on the tool bar.
+
+#+CAPTION: The save icon on the tool bar
+    [[file:savetoolbar.png]]
+
+    Finally, the hot key =Ctrl+x Ctrl+s= will save the current file.
+    If you'd like to save the file under a new name, hit =Ctrl+x
+    Ctrl+w= and type the new file name in the minibuffer.
+    
+
+
+
+
 
 * Miscellaneous
 
@@ -253,5 +271,5 @@ to people opening an org file for the first time.
 #+AUTHOR: Adam Washington
 #+STARTUP: inlineimages
 
-#  LocalWords:  Minibuffer Ctrl
+#  LocalWords:  Minibuffer Ctrl minibuffer
 
