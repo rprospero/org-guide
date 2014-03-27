@@ -149,11 +149,97 @@ you'd like to learn more about what's available, continue on to the
 next chapter.
 
 
-#  LocalWords:  Minibuffer Ctrl
+* Reading Org Files
 
+  Since all of this documentation is in an org file, it'd be a little
+  rude of me not to give some instructions on how to understand the
+  various nuances.
 
+** Headings
+
+   A line which starts with an asterisk is a section heading.  The
+   more asterisks, the more deeply nest the section is.  You are
+   currently in the "Headings" subsection of the "Reading Org Files"
+   section.
+
+** Quotes
+
+   Any line which starts with a colon followed is a quote.  This is
+   useful not just for quoting text, but also for including
+   information which might get eaten by org-mode's text progressing.
+   For instance, typing
+: [[Quotes]]
+   directly into emacs, without quoting it first, will give you [[Quotes]]
+   (notice the lack of brackets).
+
+** Links
+
+   It's possible to link between parts of an org document.  To follow
+   a link, click on it. To create a link, put the heading name between
+   inside two set of square brackets.  For instance, [[Links]] will link
+   you back to this section.
+   
+
+   Wait, that's no help at all.  All you see is the word =Links=
+   underlined and in a different color.  What I actually typed was 
+: [[Links]]
+
+   It's possible to give a link a name besides the heading name.  For
+   instance, there is no section marked [[Links][Grand Unified Field Theory]].
+   That link just takes you back to the start of the section.  The
+   actual text reads
+: [[Links][Grand Unified Field Theory]]
+
+   The first text in the square bracket is the location to link to,
+   while the second is the text for the link.  This can also be used
+   to create links to things outside the file.
+
+: [[file:guide.html][A link to a local file]]
+: [[http://orgmode.org/manual/index.html][An internet link]]
+
+* Beginning Editing
+
+  Emacs is a text editor in the same way that a Boeing 747 is a walkie
+  talkie.  After all, you can climb into the cockpit, pick up the
+  microphone, press the button, and talk to some person at the air
+  traffic control tower.  It does everything a walkie talkie is
+  supposed to do.  However, you can certainly find a light
+  walkie-talkie and a less expensive one.  However, the does some neat
+  things that your average walkie talkie doesn't.  You can use it as a
+  flash light, a storage shed, an air conditioner, or even a bus.
+  With some training, there are people who have even made one fly, but
+  that's far beyond the scope of this document.
 
   
+** The Basics
+
+   There's a couple of basic things that you'll want from any text
+   editor.
+
+*** Opening a file
+
+    There are three ways to open a file.  The most familiar is to open
+    the =File= menu and select =Open File...=.  This will bring up the
+    standard file dialog for your operating system.  Similarly,
+    clicking on the open icon in the tool bar.
+
+#+CAPTION: The open icon in the tool bar
+    [[file:opentoolbar.png]]
+
+    The final way to open files is via the hot key =Ctrl+x Ctrl+f=.  A
+    message will pop up in the mini buffer asking for the path of the
+    file.  If the file has a long name, you can use the TAB key to
+    complete the file name for you.  For instance, if you need to open
+    =StupidlyLongFileName.txt=, you can simply type =Stup= and hit the
+    tab key and emacs will complete the rest for you.  If there are
+    two possible completion (e.g. =StupidlyLongFileName1.txt= and
+    =StupidlyLongFileName2.txt=), then Emacs will fill out everything
+    it can (=StupidlyLongFileName=) and let you type the next
+    character that distinguishes between the two files (=1= or =2=).
+    You can hit the TAB key twice to get a list of all of the possible
+    completions.
+
+
 * Miscellaneous
 
 I'm using this part of the document to handle all of the org mode
