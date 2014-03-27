@@ -148,11 +148,24 @@ write your own documentation however you want.  On the other hand, if
 you'd like to learn more about what's available, continue on to the
 next chapter.
 
-#+TITLE: A Newbie's Guide to Org Mode in Emacs
-#+AUTHOR: Adam Washington
 
 #  LocalWords:  Minibuffer Ctrl
 
 
 
   
+* Miscellaneous
+
+I'm using this part of the document to handle all of the org mode
+formatting.  I don't want it at the front, since it would be confusing
+to people opening an org file for the first time.
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [twocolumn]
+
+#+TITLE: A Newbie's Guide to Org Mode in Emacs
+#+AUTHOR: Adam Washington
+#+STARTUP: inlineimages
+
+#  LocalWords:  Minibuffer Ctrl
+
