@@ -252,10 +252,40 @@ next chapter.
     Finally, the hot key =Ctrl+x Ctrl+s= will save the current file.
     If you'd like to save the file under a new name, hit =Ctrl+x
     Ctrl+w= and type the new file name in the minibuffer.
-    
 
+*** Close a file
 
+    The =Close= command in the =File= menu will close the current
+    file.  Note that Emacs can have more than one file open at a time,
+    so closing the current file will not close Emacs.  The close
+    button on the tool bar has the same effect.
 
+#+Caption: Close button on the tool bar.
+    [[file:closetoolbar.png]]
+
+    The hotkey to close the current file is =Ctrl-x k=.
+
+*** Create a new file
+
+    Creating a new file in emacs works a little differently than it
+    does in other text editors.  In most programs, you create a new
+    file, play with it for a bit, then decide what to call it when you
+    save it.  With emacs, you decide what to call the file the moment
+    that you start working on it.  It doesn't get written to the disk
+    until you actually save the file, but you need to pick a name first.
+
+    Through the menu, this is done with =Visit New File= under the
+    file menu.  It works exactly like the =Open File= option, except
+    it will let you chose the name of a new file as well.  If you
+    chose a file name that it already taken, it just opens the file
+    up.  This same behavior is performed by the new file menu button.
+
+#+CAPTION: New file menu button
+    [[file:newtoolbar.png]]
+
+    There is no hot key for creating a new file.  Instead, just use
+    the same =Ctrl+x Ctrl+f= for opening an existing file to open a
+    new one.
 
 
 * Miscellaneous
